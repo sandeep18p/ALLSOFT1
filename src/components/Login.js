@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { generateOTP, validateOTP } from '../services/api';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,8 +11,15 @@ const Login = () => {
   const [step, setStep] = useState('mobile'); // 'mobile' or 'otp'
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const { login } = useAuth();
+  const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/');
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleSendOTP = async () => {
     if (!mobileNumber || mobileNumber.length !== 10) {

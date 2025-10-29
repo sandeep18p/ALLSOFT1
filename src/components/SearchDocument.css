@@ -1,0 +1,30 @@
+.search-container {
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.search-container .card {
+  border-radius: 10px;
+}
+
+.search-container .card-body {
+  padding: 30px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.modal {
+  display: block;
+}
+
+modal-content {
+  border-radius: 10px;
+}
+
+modal-body img {
+  border-radius: 5px;
+}
+

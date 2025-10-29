@@ -1,0 +1,13 @@
+.admin-container {
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.admin-container .card {
+  border-radius: 10px;
+}
+
+.admin-container .card-body {
+  padding: 30px;
+}
+
