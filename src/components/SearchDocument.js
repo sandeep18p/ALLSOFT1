@@ -33,7 +33,7 @@ const SearchDocument = () => {
   const [previewType, setPreviewType] = useState(''); // 'image', 'pdf', or 'unsupported'
 
   const categories = [
-    { value: 'Company', label: 'Personal' },
+    { value: 'Personal', label: 'Personal' },
     { value: 'Professional', label: 'Professional' },
   ];
 
